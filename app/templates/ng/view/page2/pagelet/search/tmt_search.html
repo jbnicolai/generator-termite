@@ -1,0 +1,28 @@
+<div ng-controller="page1SearchControl">
+<form ng-submit="search()" role="form" class="form-inline">
+    <div class="form-group">
+        <label for="our_classmate_address">
+            住址
+        </label>
+        <select name="address" ng-model="urlSearch.address" id="our_classmate_address"
+        class="form-control">
+            <option value="beijing">
+                北京
+            </option>
+            <option value="UK">
+                UK
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="our_classmate_name">
+            姓名
+        </label>
+        <input type="text" name="name" ng-model="urlSearch.name" id="our_classmate_name"
+        class="form-control" placeholder="请输入姓名">
+    </div>
+    <button class="btn btn-default" type="submit">
+        搜索
+    </button>
+</form>
+</div>

@@ -1,0 +1,18 @@
+<div ng-controller="page1PaginationControl">
+    <div pagination
+        ng-show="page.total_pn > 1"
+        page="page.current_pn"
+        items-per-page="1"
+        total-items="ourClassmateList.page.total_pn"
+        on-select-page="changePage(page)"
+
+        boundary-links="true"
+        previous-text="&lsaquo;"
+        next-text="&rsaquo;"
+        first-text="&laquo;"
+        last-text="&raquo;"
+        max-size="20"
+        rotate="false"
+        >
+    </div>
+</div>

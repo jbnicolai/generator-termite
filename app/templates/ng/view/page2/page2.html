@@ -1,0 +1,24 @@
+<div ng-controller="OurClassmateController">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="page-title">
+                同学
+                <small>列表页</small>
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+         <section class="widget">
+                <div class="body">
+                    <div>
+                    <button ng-click="addOurClassmate()" class="btn btn-info">新建</button>
+                    <!--<ng-include src="'view/page1/pagelet/search/pagination.html'"></ng-include>-->
+                    <ng-include src="'view/page1/pagelet/table/tmt_table.html'"></ng-include>
+                    <ng-include src="'view/page1/pagelet/pagination/tmt_pagination.html'"></ng-include>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

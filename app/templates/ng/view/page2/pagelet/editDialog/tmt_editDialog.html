@@ -1,0 +1,77 @@
+<div ng-controller="page1PaginationControl">
+<modal ng-show="ourClassmateActionData.editResourceInstance">
+    <form name="ourClassmateEditForm" novalidate>
+        <modal-header ng-if="!ourClassmateActionData.editResourceInstance.id">
+            新建同学
+        </modal-header>
+        <modal-header ng-if="ourClassmateActionData.editResourceInstance.id">
+            编辑同学
+        </modal-header>
+        <modal-body>
+            ourClassmateActionData.editResourceInstance: {{ ourClassmateActionData.editResourceInstance
+            }}
+            <div class="form-group">
+                <label for="our_classmate_address">
+                    住址
+                </label>
+                <select name="address" ng-model="ourClassmateActionData.editResourceInstance.address"
+                id="our_classmate_address" class="form-control" ng-disabled="ourClassmateActionData.editResourceInstance.id">
+                    <option value="beijing">
+                        北京
+                    </option>
+                    <option value="UK">
+                        UK
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="our_classmate_name">
+                    姓名
+                    <span class="text-warning">
+                        *
+                    </span>
+                </label>
+                <input type="text" name="name" ng-model="ourClassmateActionData.editResourceInstance.name"
+                id="our_classmate_name" class="form-control" placeholder="请输入姓名" ng-required="true"
+                ng-maxlength="10" ng-pattern="/^[一-龥]+$/" ng-disabled="ourClassmateActionData.editResourceInstance.id">
+                <div class="text-warning" ng-show="ourClassmateEditForm.name.$dirty && ourClassmateEditForm.name.$error.required">
+                    请输入姓名
+                </div>
+                <div class="text-warning" ng-show="ourClassmateEditForm.name.$dirty && ourClassmateEditForm.name.$error.maxlength">
+                    超出最大长度：10
+                </div>
+                <div class="text-warning" ng-show="ourClassmateEditForm.name.$dirty && ourClassmateEditForm.name.$error.pattern">
+                    请填写中文名字
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="our_classmate_portrait">
+                    头像
+                    <span class="text-warning">
+                        *
+                    </span>
+                </label>
+                <input-image name="portrait" ng-model="ourClassmateActionData.editResourceInstance.portrait"
+                id="our_classmate_portrait" upload-to="ngmis" ng-required="true" ng-disabled="ourClassmateActionData.editResourceInstance.id"
+                width-limit="500" height-limit="600" min-kbytes="100" max-kbytes="200"
+                enabled-formats="['png', 'jpg']">
+                </input-image>
+                <span class="text-danger">
+                    500 x 600 px 大于100k 小于200k 格式: png,jpg
+                </span>
+                <div class="text-warning" ng-show="ourClassmateEditForm.portrait.$dirty && ourClassmateEditForm.portrait.$error.required">
+                    请输入头像
+                </div>
+            </div>
+        </modal-body>
+        <modal-footer>
+            <button class="btn btn-success" ng-click="saveOurClassmate()" ng-disabled="ourClassmateEditForm.$invalid">
+                确认
+            </button>
+            <button class="btn btn-default" ng-click="cancelEditOurClassmate()">
+                取消
+            </button>
+        </modal-footer>
+    </form>
+</modal>
+</div>

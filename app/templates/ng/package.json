@@ -1,0 +1,21 @@
+{
+   "devDependencies": {
+      "event-stream": "~3.2.1",
+      "gulp-order": "1.1.1",
+      "gulp-load-plugins": "~0.8",
+      "amd-optimize": "~0.4.3",
+      "gulp-htmlmin": "~1.0",
+      "gulp-rename": "~1.2",
+      "gulp-html-replace": "~1.4.3",
+      "gulp-inject": "~1.1.1",
+      "gulp-replace": "~0.5.1",
+      "gulp-angular-extender": "~0.1",
+      "gulp-angular-templatecache": "~1.5",
+      "gulp-concat": "~2.4.0",
+      "gulp-less": "~2.0",
+      "gulp-clean": "~0.3",
+      "gulp-uglify": "~0.2.1",
+      "gulp-jshint": "~1.5.1",
+      "gulp": "~3.8.10"
+   }
+}

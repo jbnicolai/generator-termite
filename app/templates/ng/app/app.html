@@ -1,0 +1,8 @@
+<div class="main" ng-controller="mainCtrl" ng-switch="state">
+    <div ng-switch-when="ready" class="main-bd">
+        <!--<a href="/page1"></a>-->
+        <div class="center" ng-view></div>
+    </div>
+    <div ng-switch-default class="loading">
+    </div>
+</div>
