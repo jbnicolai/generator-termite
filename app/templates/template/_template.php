@@ -18,7 +18,7 @@
         //animate.css插件 doc:http://daneden.github.io/animate.css/
         '<%= modName %>/libs/animate.css',<% } %>
         //views下面合并后的css
-        '<%= modName %>/static/<%= projectFoler %>/app_all.css',
+        '<%= modName %>/static/app/dist/main.css',
         //本项目css 文件
         '<%= modName %>/template/<%= projectFoler %>/index.css'
       ));
@@ -62,7 +62,8 @@
   /**
    * 如下代码用将由框架负责处理js资源加载到页面
    */
-  echo HTML::js('<%= projectFoler %>/app_all.js', "<%= modName %>");
+  echo HTML::js('app/dist/main.js', "<%= modName %>");
+  echo HTML::js('app/dist/templates.js', "<%= modName %>");
   ?>
 
   <?php

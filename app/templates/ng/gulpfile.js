@@ -11,7 +11,7 @@ var gulp = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var plugins = gulpLoadPlugins();
 var path={
-    dest:'../static/app/dist'
+    dest:'../static/dist'
 };
 
 gulp.task('clean', function () {
