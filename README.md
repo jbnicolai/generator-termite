@@ -13,3 +13,10 @@ npm i -g generator-termite
 ```bash
 yo termite
 ```
+
+# update
+update the generator while there's a new version avalaible
+```bash
+npm update -g generator-termite
+```
+
